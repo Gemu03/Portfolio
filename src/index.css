@@ -4,5 +4,25 @@ body {
   font-family: "Raleway", serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(to left, rgb(27 20 41), rgb(20 15 35));
+  background-image: linear-gradient(to left, rgb(7, 9, 55), rgb(5, 4, 18));
+}
+.webopage {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.webopage h1 {
+  font-size: 2em;
+  color: #3276d5;
+}
+
+.webopage img {
+  width: 300px;
+  height: auto;
+  margin: 20px 0;
+}
+
+.webopage p {
+  font-size: 1.2em;
+  color: #d0d0d0;
 }

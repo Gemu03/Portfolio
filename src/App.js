@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import Projects from "./components/Projects/Projects";
 import Footer from "./components/Footer";
 import Resume from "./components/Resume/ResumeNew";
+import Webo from "./components/Webo/Webo";
 import {
   BrowserRouter as Router,
   Route,
@@ -23,7 +24,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       upadateLoad(false);
-    }, 1200);
+    }, 1400);
 
     return () => clearTimeout(timer);
   }, []);
@@ -36,9 +37,10 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/project" element={<Projects />} />
           <Route path="/about" element={<About />} />
+          <Route path="/project" element={<Projects />} />
           <Route path="/resume" element={<Resume />} />
+          <Route path="/Webo" element={<Webo />} />
           <Route path="*" element={<Navigate to="/"/>} />
         </Routes>
         <Footer />

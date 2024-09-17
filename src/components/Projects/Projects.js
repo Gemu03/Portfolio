@@ -2,13 +2,65 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
 import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import editor from "../../Assets/Projects/codeEditor.png";
+import ferreteria from "../../Assets/Projects/leaf.png";
+import gestionEmpleados from "../../Assets/Projects/emotion.png";
+import prestamosBicis from "../../Assets/Projects/codeEditor.png";
 import chatify from "../../Assets/Projects/chatify.png";
 import suicide from "../../Assets/Projects/suicide.png";
 import bitsOfCode from "../../Assets/Projects/blog.png";
 
+function Projects() {
+  return (
+    <Container fluid className="project-section">
+      <Particle />
+      <Container>
+        <h1 className="project-heading">
+          Mis Recientes <strong className="purple">Proyectos </strong>
+        </h1>
+        <p style={{ color: "white" }}>
+          Aquí hay algunos proyectos en los que he trabajado recientemente.
+        </p>
+        <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ferreteria}
+              isBlog={false}
+              title="Ferretería JF"
+              description="Sitio web de una ferretería local. Desarrollado con HTML, SCSS y JavaScript."
+              ghLink="https://github.com/Gemu03/ferreteria-jf"
+              demoLink="https://ferreteria-jf.example.com/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={gestionEmpleados}
+              isBlog={false}
+              title="Gestión de Empleados"
+              description="Sistema de gestión de empleados para pequeñas empresas. Desarrollado utilizando React, Python, FastAPI y MySQL."
+              ghLink="https://github.com/Gemu03/gestion-empleados"
+              demoLink="https://gestion-empleados.example.com/"
+            />
+          </Col>
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={prestamosBicis}
+              isBlog={false}
+              title="Préstamo de Bicicletas"
+              description="Base de datos masiva de préstamo de bicicletas entre ciudades, usuarios y estaciones. Con más de 1 millón de registros en cada tabla. Desarrollado con MySQL, MariaDB y SQLite."
+              ghLink="https://github.com/Gemu03/prestamo-bicicletas"
+              demoLink="https://prestamo-bicicletas.example.com/"
+            />
+          </Col>
+        </Row>
+      </Container>
+    </Container>
+  );
+}
+
+export default Projects;
+/* 
 function Projects() {
   return (
     <Container fluid className="project-section">
@@ -91,6 +143,4 @@ function Projects() {
       </Container>
     </Container>
   );
-}
-
-export default Projects;
+} */

@@ -11,7 +11,7 @@ function Particle() {
             value: 160,
             density: {
               enable: true,
-              value_area: 1500,
+              value_area: 1100,
             },
           },
           line_linked: {
@@ -28,7 +28,7 @@ function Particle() {
           opacity: {
             anim: {
               enable: true,
-              speed: 1,
+              speed: 3,
               opacity_min: 0.05,
             },
           },
